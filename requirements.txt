@@ -1,9 +1,10 @@
+flask
+flask-cors
+gunicorn
 tensorflow-cpu==2.10.1
 keras==2.10.0
 numpy<2
-flask
-flask-cors
 pillow
-gunicorn
-h5py
 opencv-python-headless
+matplotlib
+h5py
