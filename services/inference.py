@@ -1,4 +1,3 @@
-# services/inference.py
 import threading
 import tensorflow as tf
 
