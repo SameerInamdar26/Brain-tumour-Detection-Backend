@@ -1,5 +1,6 @@
-from tensorflow.keras.models import load_model as keras_load_model
+# services/inference.py
 import threading
+import tensorflow as tf
 
 _model = None
 _model_lock = threading.Lock()
@@ -11,12 +12,11 @@ def load_model_once():
     if _model is None:
         with _model_lock:
             if _model is None:
-                _model = keras_load_model(MODEL_PATH)
+                _model = tf.keras.models.load_model(MODEL_PATH, compile=False)
     return _model
 
 def load_model():
     return load_model_once()
 
 def predict_image(model, img_array):
-    preds = model.predict(img_array)
-    return preds
+    return model.predict(img_array)
