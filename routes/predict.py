@@ -5,7 +5,7 @@ from services.inference import load_model, predict_image
 
 predict_bp = Blueprint("predict", __name__)
 
-model = load_model()
+# model = load_model()
 
 CATEGORIES = ["glioma", "meningioma", "notumor", "pituitary"]
 
