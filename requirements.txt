@@ -1,8 +1,8 @@
 flask
 flask-cors
-tensorflow
+tensorflow-cpu==2.15.0
 numpy
 pillow
 matplotlib
 h5py
- 
+gunicorn
